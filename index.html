@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio de Rubén Magdaleno</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__container">
+      <img src="Assets/Imgperfil.png" alt="Foto de Rubén Magdaleno" class="header__photo">
+      <div class="header__info">
+        <h1 class="header__name">Ruben Magdaleno</h1>
+        <p class="header__role">UX/UI Designer</p>
+        <p class="header__description">
+          Motivado por la eficiencia en cada aspecto de mi trabajo. Cada día es una oportunidad para avanzar hacia mis objetivos, 
+          midiendo la efectividad de cada paso y optimizando cada proceso. Veo la vida como un gran campo de juego; lleno de emoción, 
+          donde cada proyecto es una jugada estratégica para crear experiencias únicas y funcionales. Mi enfoque está en generar soluciones 
+          que equilibren estética y funcionalidad, siempre con el usuario en el centro de la experiencia.
+        </p>
+      </div>
+    <a href="#" class="header__contact-button" id="contactButton">Contact</a>
+
+    <!-- Modal de contacto -->
+<div class="modal" id="contactModal">
+  <div class="modal__contentbutton">
+    <span class="modal__close" id="closeModal">&times;</span>
+    <h2 class="modal__title">Contacto</h2>
+    <p class="modal__info">Correo: <a href="mailto:rubensm619@gmail.com">rubensm619@gmail.com</a></p>
+    <p class="modal__info">WhatsApp: <a href="https://wa.me/525564549391" target="_blank">+52 556 454 9391</a></p>
+  </div>
+</div>
+  </header>
+
+  <main class="main">
+    <section class="projects">
+      <h2 class="projects__title">Proyectos</h2>
+      <div class="projects__grid">
+        <!-- Proyecto 1 Data view -->
+        <article class="project" onclick="openModal('modal-dataview')">
+          <img src="Assets/Datav.png" alt="Logo DataView AI" class="project__image">
+          <p class="project__status">En Desarrollo</p>
+          <h3 class="project__name">DataView AI</h3>
+          <p class="project__type">Movil project</p>
+          <p class="project__category">Design</p>
+        </article>
+        
+        <!-- Modal Data view -->
+        <div id="modal-dataview" class="modal">
+          <div class="modal__content">
+            <span class="modal__close" onclick="closeModal('modal-dataview')">&times;</span>
+            <h2>Documents - DataviewAI</h2>
+            
+            <div class="pdf-buttons1">
+              <button onclick="changePDF('Assets/.pdf')">UI Design</button>
+              <button onclick="changePDF('Assets/.pdf')">UX Design</button>
+              <button onclick="changePDF('Assets/.pdf')">Foundations</button>
+            </div>
+          </div>
+        </div>               
+
+        <!-- Proyecto 2 Meztly-->
+        <article class="project" onclick="openModal('modal-Meztly')">
+          <img src="Assets/Meztly.png" alt="Logo Meztli Yemayá" class="project__image">
+          <h3 class="project__name">Meztli Yemaya</h3>
+          <p class="project__type">Web project</p>
+          <p class="project__category">Case Study</p>
+        </article>
+
+          <!-- Modal Meztly -->
+          <div id="modal-Meztly" class="modal">
+            <div class="modal__content">
+              <span class="modal__close" onclick="closeModal('modal-Meztly')">&times;</span>
+              <h2>Documents - Meztly</h2>
+              
+              <div class="pdf-buttons">
+                <button onclick="changePDF('Assets/Meztly/UIMtly.pdf', 'modal-Meztly')">UI Design</button>
+                <button onclick="changePDF('Assets/Meztly/UXMtly.pdf', 'modal-Meztly')">UX Design</button>
+                <button onclick="changePDF('Assets/Meztly/FoundationsMtly.pdf', 'modal-Meztly')">Foundations</button>                
+              </div>
+
+              <!-- Embed PDF -->
+              <embed id="pdfEmbed-Meztly" src="Assets/Meztly/UXMtly.pdf" type="application/pdf" width="100%" height="500px" />
+            </div>
+          </div>          
+  
+
+        <!-- Proyecto 3 Coachv-->
+        <article class="project" onclick="openModal('modal-Coachv')">
+          <img src="Assets/Coachv.png" alt="Logo Coach Virtual" class="project__image">
+          <h3 class="project__name">Coach Virtual</h3>
+          <p class="project__type">Special project</p>
+          <p class="project__category">Case Study</p>
+        </article>
+
+         <!-- Modal Coachv -->
+         <div id="modal-Coachv" class="modal">
+          <div class="modal__content">
+            <span class="modal__close" onclick="closeModal('modal-Coachv')">&times;</span>
+            <h2>Documents - Coach virtual</h2>
+           
+            <div class="pdf-buttons">
+              <button onclick="changePDF('Assets/Cv/UICv.pdf', 'modal-Coachv')">UI Design</button>
+              <button onclick="changePDF('Assets/Cv/UXCv.pdf', 'modal-Coachv')">UX Design</button>
+              <button onclick="changePDF('Assets/Cv/FoundationsCv.pdf', 'modal-Coachv')">Foundations</button>              
+            </div>
+              
+            <!-- Embed PDF -->
+              <embed id="pdfEmbed-Coachv" src="Assets/Cv/UXCv.pdf" type="application/pdf" width="100%" height="500px" />
+            </div>
+          </div>         
+     
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__text">&copy; 2024 Ruben Magdaleno. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+
+</body>
+</html>
